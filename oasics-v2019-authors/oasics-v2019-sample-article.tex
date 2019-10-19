@@ -68,14 +68,15 @@ Today's programmers often need to use multiple programming languages together, e
 \section{Introduction}
 \label{sec:typesetting-summary}
 
-TODO: add more developed definitions of psycholinguistic, code switching, interferences, etc. 
+
 Programmers today are often expected to use multiple programming languages at once, engaging in \textit{polyglot programming.} Perhaps they are developing for the web, and using some mixture of HTML, CSS, Javascript, SQL, and others. They could be using a virtual platform like JVM or .NET, using a number of programming languages and libraries together. Maybe they require a more expressive, higher-level scripting language or domain specific language, embedding it into a lower-level one with better run-time performance like C or C++. On a project level, they could build separate programs and let them interact and send data to each other using pipes, cross-compile one language into another, or use a language’s ability to interface with other languages. Even within a single file, they may need to mix programming languages. 
 
-Advantages of this practice include the cost-effective ability to reuse code already written in other languages, and using programming languages that are better suited to one’s goals. After all, programming languages are not created equally -- each has its characteristics and strengths, and is more useful in certain domains and tasks than others. 
+The advantages of polyglot programming include the cost-effective ability to reuse code already written in other languages, and using programming languages that are better suited to one’s goals. After all, programming languages are not created equally -- each has its characteristics and strengths, and is more useful in certain domains and tasks than others. 
 
-A lot of existing work justifies the design of these programming languages from a formal standpoint, addressing their behavior and performance. However, there is notably less of a focus on the programmer, and emerging work seeks to better use the knowledge, principles, and methods of human computer interaction (HCI) in programming language design, showing that gathering data on and considering programmer usability leads to better design \cite{pl0017, pl0027}. In doing this, we seek to understand the impact of a programming language on its users: the programmers \cite{pl0017}. 
+However, polyglot programming may also have costs, the same way that bilingual speakers pay some costs. TODO: add more developed definitions of psycholinguistic, code switching, interferences, etc. 
 
-It seems natural then, given the ubiquity of the use of multiple programming languages, to wonder how they are being used, and what the impact of using multiple programming languages has on the programmer. Intuitively, we may think that knowing multiple programming languages strengthens one’s understanding of programming concepts, or that switching between languages is difficult and may incur some cognitive cost. But how well do these intuitions hold, and how can we go about studying them? 
+
+Given the commonality of programmers writing code in multiple programming languages, we think it is important to know more about the impact of using multiple programming languages has on the programmer, and how the knowledge and use of multiple programming languages affects the code the programmer writes. Intuitively, we may think that knowing multiple programming languages strengthens one’s understanding of programming concepts, or that switching between languages is difficult and may incur some cognitive cost, but how well do these intuitions hold and how can we go about studying them? 
 
 Though programming languages and natural languages have their differences, there are still a number of compelling parallels. One such parallel that is relevant to polyglot programming is that there are many polyglots of natural language, who use different languages in different domains. Similarly to programming languages, speakers may switch languages at multiple scales, substituting words and phrases in one base language with those of another, or switching languages altogether depending on who they are speaking to and in what context. 
 
@@ -85,16 +86,19 @@ In this way, by learning more about how programmers use and are affected by thei
 
 \section{Relevant work}
 
-\subsection{Relevant work in programming languages}
-Work in the psychology of programming and the HCI-based approach toward programming language design has made major strides, but the question of polyglot programming is still very new. 
+\subsection{HCI for Programmers}
+HCI methods have already been used to examine programming languages and environments. This work seeks to better use the knowledge, principles, and methods of human computer interaction (HCI) in programming language design, showing that gathering data on and considering programmer usability leads to better design \cite{pl0017, pl0027}. Similarly, we seek to understand the impact of knowing and using multiple programming languages on users: the programmers. 
 
-Most of the work that addresses multiple languages seems to surround the learning and teaching of programming languages. This work includes justifying and exploring the impact of using specific languages (like Python or Java) in introductory computer science courses \cite{pl0024, pl0023}, and effective methodologies for learning subsequent languages \cite{pl0018, pl0022}. Additional work in this realm that does not address multiple languages includes investigations of how a programmer’s experience level impacts how they reason about, read, and/or debug programs \cite{pl0019, pl0021, pl0020}. 
+\subsection{Relevant work in programming languages}
+Work in the psychology of programming and the HCI-based approach toward programming language design has made major strides. For example, there are investigations of how a programmer’s experience level impacts how they reason about, read, and/or debug programs \cite{pl0019, pl0021, pl0020}. However, the question of polyglot programming is less thoroughly explored. 
+
+Most of the work that addresses multiple languages focuses on the learning and teaching of programming languages. This work includes justifying and exploring the impact of using specific languages (like Python or Java) in introductory computer science courses \cite{pl0024, pl0023}, and effective methodologies for learning subsequent languages \cite{pl0018, pl0022}.  
 
 There is some literature surrounding the design of multi-language systems like .NET that discuss ways to support polyglot programming and its design \cite{pl0038}, but it does not focus on the effects that these multi-language systems have on programmers and their productivity. 
 
-A method of looking into code quality across Github projects proposed by Ray et. al \cite{pl0026} was applied to this question of the use of programming multiple languages, investigating the impact of multiple programming languages on software quality \cite{pl0025}. In this study, Kochhar et al. looked for the effects of using different programming languages on the number of bug fix commits in a dataset of popular projects from Github. They found that in general, projects that used more programming languages were more bug-prone, especially for memory, concurrency, and algorithmic bugs, and that specific languages like C++, Objective-C, and Java were more bug-prone \cite{pl0025}.
+A method of looking into code quality across Github projects proposed by Ray et. al \cite{pl0026} was applied to this question of the use of multiple  programming languages, investigating the impact of multiple programming languages on software quality \cite{pl0025}. In this study, Kochhar et al. looked for the effects of using different programming languages on the number of bug fix commits in a dataset of popular projects from Github. They found that in general, projects that used more programming languages were more bug-prone, especially for memory, concurrency, and algorithmic bugs, and that specific languages like C++, Objective-C, and Java were more bug-prone \cite{pl0025}.
 
-TODO: add summary paragraph for the findings so far 
+%TODO: add summary paragraph for the findings so far 
 
 \subsection{Relevant work in natural languages}
 Studies regarding natural language polyglots are more numerous. A central observation is that bilinguals operate using different language modes: the monolingual speech mode and the bilingual speech mode \cite{pl0046}. In the monolingual speech mode, the bilingual almost completely deactivates one language, while in the bilingual speech mode, they choose a base language but activate another language occasionally in the form of code-switching and borrowing \cite{pl0046}. This deactivation when a language is not in use involves prefrontal brain activity associated with cognitive control \cite{pl0048}. It seems to be related to task switching, as it has been shown that performance is slower after a task switch than a task repetition, which likely has to do with associations between stimuli and task such that when a task activation is weak (e.g. on a task switch), the stimuli may trigger retrieval of the competing task \cite{pl0031}. 
@@ -107,18 +111,20 @@ Additionally, even when in a monolingual speech mode and trying to speak one lan
 
 TODO: add a paragraph discussing the improvements of executive control of bilinguals (Bialystok E. Cognitive complexity and attentional control in the bilingual mind. Child Development. 1999;70:636–644. [Google Scholar]), with the added nuance that different language pairs/degrees of use and familiarity may impact the degree of improvement in executive control (may map pretty well to different PL paradigms) 
 
-TODO: add a summary paragraph
+%TODO: add a summary paragraph
 
 TODO: Connect the bilingualism research in section 2.2 to these open questions more directly 
 
 \section{Open questions and potential approaches}
 We pose four larger questions regarding the use of multiple programming languages that are inspired by the hypotheses, methods, and work within the psycholinguistic study of bilingualism. 
-\paragraph*{1. When a programmer is multilingual, how does knowledge of certain programming languages influence programming in another language?}
+
+\paragraph*{1. How does knowledge of certain programming languages influence programming in another language?}
 
 Do programmers ever accidentally use an unintended programming language syntax or concept while trying to program in a specific programming language? This could occur on a number of levels, taking on forms like: using a function word or symbol incorrectly in the desired language because of that symbol’s use in another language, using an incorrect construct (e.g. for loop constructs look and act differently between C and Python), and approaching a function or program using logic that is clearly inspired by another language (e.g. trying a “Pythonic” way in a language where it is less conventional, or not even possible). 
 
 This may be challenging to isolate and quantify especially in existing projects and code, so approaching this in a natural programming environment may be of interest. We can achieve this by observing and looking out for natural errors that programmers run into and their approaches to certain programming problems, paying particular attention to what programming language, if any, these errors come from and approaches are inspired by.
-\paragraph*{2. What is the nature of these relationships? Are certain kinds of languages more prone to influencing other kinds?} 
+
+\paragraph*{2. Are certain kinds of languages more prone to influencing other kinds?} 
 
 From there, it also seems important to determine which languages influence and are influenced by others, and if there are patterns in terms of the characteristics of the languages involved, or in terms of the relationships between the languages. For example, do similar languages influence each other more, as we find with natural language? Does knowledge of languages that use certain paradigms have greater influence over the use of other programming languages? 
 
